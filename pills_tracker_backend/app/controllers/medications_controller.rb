@@ -23,6 +23,12 @@ class MedicationsController < ApplicationController
     render json: @medication
   end
 
+  def destroy
+    @medication = Medication.find(params[:id])
+    @medication.destroy
+    render json: @medication
+  end
+
   private
 
   def m_params
