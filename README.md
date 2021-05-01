@@ -4,4 +4,4 @@ Basic Medication Tracker backend data handling for Doctors monitoring patient pr
 
 Run `bundle install` and `rail s` to start.
 
-This should go to `http://localhost:3000` as the host.
+This should go to `http://localhost:3000` as the host..
