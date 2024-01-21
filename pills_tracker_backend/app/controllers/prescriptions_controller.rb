@@ -14,15 +14,24 @@ class PrescriptionsController < ApplicationController
   end
 
   def create
-    prescription = Prescription.new(p_params)
+    @prescription = Prescription.new(p_params)
+    if @prescription.save
+      render json: @prescription
+    else
+      render json: {error: 'Error saving prescription backend'}
+    end
+  end
 
-    render json: prescription.save
+  def destroy
+    @prescription = Prescription.find(params[:id])
+    @prescription.destroy
+    render json: @prescription
   end
 
   private
 
   def p_params
-      params.permit(:dosagestotal, :dosagesper, :dosagesfrequency, :patient_id, :medication_id)
+      params.require(:prescription).permit(:dosagestotal, :dosagesper, :dosagesfrequency, :patient_id, :medication_id)
   end
 
 end
