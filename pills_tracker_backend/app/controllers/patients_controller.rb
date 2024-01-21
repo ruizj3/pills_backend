@@ -18,7 +18,7 @@ class PatientsController < ApplicationController
     if @patient.save
       render json: @patient
     else
-      render json: {error: 'Error saving patient'}
+      render json: {error: 'Error saving patient backend'}
     end
   end
 
