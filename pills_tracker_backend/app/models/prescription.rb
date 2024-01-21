@@ -1,7 +1,7 @@
 class Prescription < ApplicationRecord
   belongs_to :patient
   belongs_to :medication
-  has_many :takedosage
+  has_many :takedosage, dependent: :destroy
 
   def takedose
     if self.dosagestotal >= self.dosagesper
