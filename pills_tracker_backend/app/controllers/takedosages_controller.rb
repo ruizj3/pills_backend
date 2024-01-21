@@ -20,6 +20,11 @@ class TakedosagesController < ApplicationController
     render json: takedosage.save ? takedosage : {message: takedosage.errors.messages[:invalid]}
   end
 
+  def destroy
+    @takedosage = Takedosage.find(params[:id])
+    @takedosage.destroy
+    render json: @takedosage
+  end
 
   private
 

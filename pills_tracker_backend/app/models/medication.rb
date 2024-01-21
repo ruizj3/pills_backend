@@ -1,3 +1,3 @@
 class Medication < ApplicationRecord
-  has_many :prescription
+  has_many :prescription, dependent: :destroy
 end
