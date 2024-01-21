@@ -10,11 +10,14 @@ class MedicationsController < ApplicationController
   end
 
   def create
-    medication = Medication.new(m_params)
-
-    render json: medication.save
+    @medication = Medication.new(m_params)
+    if @medication.save
+      render json: @medication
+    else
+      render json: {error: 'Error saving medication backend'}
+    end
   end
-
+  
   def update
     @medication = Medication.find(params[:id])
     @medication.update(name: params["medication"]["name"])
