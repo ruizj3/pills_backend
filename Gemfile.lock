@@ -105,7 +105,6 @@ GEM
     nokogiri (1.16.0)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    pg (1.5.4)
     puma (4.3.12)
       nio4r (~> 2.0)
     racc (1.7.3)
@@ -178,7 +177,6 @@ DEPENDENCIES
   dotenv-rails
   fast_jsonapi
   listen (~> 3.2)
-  pg
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.2)

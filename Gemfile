@@ -42,4 +42,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Load Env
 gem 'dotenv-rails'
-gem 'pg'
+# gem 'pg' I don't think I need this installed within the app at all
