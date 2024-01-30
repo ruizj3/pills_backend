@@ -1,7 +1,7 @@
 databases:
-  - name: pills-backend
-    databaseName: pills-backend-db
-    user: Joseph Ruiz
+  - name: pillsbackend
+    databaseName: pillsbackenddb
+    user: josephRuiz
     plan: free
 
 services:
