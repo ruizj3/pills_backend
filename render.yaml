@@ -1,15 +1,15 @@
 databases:
   - name: pillsbackend
     databaseName: pillsbackenddb
-    plan: free
+    plan: starter
 
 services:
   - type: web
     name: pillsbackend
     runtime: ruby
-    plan: free
+    plan: starter
     buildCommand: "./bin/render-build.sh"
-    # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
+    preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "./bin/rails server"
     envVars:
       - key: DATABASE_URL
